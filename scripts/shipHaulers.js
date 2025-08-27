@@ -1,4 +1,27 @@
-import { getHaulers } from "./database.js"
+import { getHaulers, getCargoShips } from "./database.js"
+
+const cargoShips = getCargoShips()
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+
+        if (itemClicked.dataset.type === "hauler"){
+
+        const haulerId = parseInt(itemClicked.dataset.id)
+
+        let hauledShips = 0
+
+            for (const ship of cargoShips) {
+                if (ship.haulerId === haulerId) {}
+                    hauledShips++ 
+            }
+         }
+        window.alert(`This hauler is carrying ${hauledShips}ships.`)
+
+    }
+)
 
 
 export const HaulerList = () => {
