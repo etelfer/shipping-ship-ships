@@ -14,20 +14,21 @@ document.addEventListener(
         let hauledShips = 0
 
             for (const ship of cargoShips) {
-                if (ship.haulerId === haulerId) {}
+                if (ship.haulerId === haulerId) {
                     hauledShips++ 
             }
          }
-        window.alert(`This hauler is carrying ${hauledShips}ships.`)
+        window.alert(`This hauler is carrying ${hauledShips} cargo ships.`)
 
     }
+}
 )
 
 
 export const HaulerList = () => {
     const haulers = getHaulers()
 
-    let haulersHTML = "<ul>"
+    let haulersHTML = "<h2>Ship Haulers</h2><ul>"
 
     for (const hauler of haulers) {
 

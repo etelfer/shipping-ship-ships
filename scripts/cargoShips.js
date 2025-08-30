@@ -4,7 +4,7 @@ import { getCargoShips } from "./database.js"
 export const CargoShipList = () => {
     const cargoShips = getCargoShips()
 
-    let cargoShipsHTML = "<ul>"
+    let cargoShipsHTML = "<h2>Cargo Ships</h2><ul>"
 
     for (const cargoShip of cargoShips) {
         // Convert each cargoShip object to an <li> and append to the cargoShipsHTML string
